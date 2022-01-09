@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("path"); // eslint-disable-line global-require
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -151,7 +151,7 @@ module.exports = (env) => {
       new webpack.HotModuleReplacementPlugin(),
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(
-          process.env.NODE_ENV || "development"
+          process.env.NODE_ENV || "development",
         ),
       }),
     ],
